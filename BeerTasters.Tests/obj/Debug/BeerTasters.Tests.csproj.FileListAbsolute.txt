@@ -1,0 +1,14 @@
+C:\projects\BeerTasters\BeerTasters.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\projects\BeerTasters\BeerTasters.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\projects\BeerTasters\BeerTasters.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\projects\BeerTasters\BeerTasters.Tests\bin\Debug\BeerTasters.Tests.dll
+C:\projects\BeerTasters\BeerTasters.Tests\bin\Debug\BeerTasters.Tests.pdb
+C:\projects\BeerTasters\BeerTasters.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\projects\BeerTasters\BeerTasters.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\projects\BeerTasters\BeerTasters.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\projects\BeerTasters\BeerTasters.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\projects\BeerTasters\BeerTasters.Tests\obj\Debug\BeerTasters.Tests.csprojAssemblyReference.cache
+C:\projects\BeerTasters\BeerTasters.Tests\obj\Debug\BeerTasters.Tests.csproj.CoreCompileInputs.cache
+C:\projects\BeerTasters\BeerTasters.Tests\obj\Debug\BeerTasters.Tests.csproj.CopyComplete
+C:\projects\BeerTasters\BeerTasters.Tests\obj\Debug\BeerTasters.Tests.dll
+C:\projects\BeerTasters\BeerTasters.Tests\obj\Debug\BeerTasters.Tests.pdb

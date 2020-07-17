@@ -1,0 +1,32 @@
+﻿@model IEnumerable<BeerTasters.Common.BeerDataEntryDTO>
+
+@{
+    ViewBag.Title = "BeerDataView";
+}
+
+<h2>BeerDataView</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td> @Html.DisplayFor(model => model.id)</td>
+    <td> @Html.DisplayFor(model => model.name)</td>
+    <td> @Html.DisplayFor(model => model.description)</td>
+    <td>
+        @Html.ActionLink("Review", "Edit", new { /* id=item.PrimaryKey */ }) |
+        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+    </td>
+</tr>
+}
+
+</table>

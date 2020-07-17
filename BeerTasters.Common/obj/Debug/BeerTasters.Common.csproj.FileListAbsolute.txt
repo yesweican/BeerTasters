@@ -1,0 +1,5 @@
+C:\projects\BeerTasters\BeerTasters.Common\bin\Debug\BeerTasters.Common.dll
+C:\projects\BeerTasters\BeerTasters.Common\bin\Debug\BeerTasters.Common.pdb
+C:\projects\BeerTasters\BeerTasters.Common\obj\Debug\BeerTasters.Common.csproj.CoreCompileInputs.cache
+C:\projects\BeerTasters\BeerTasters.Common\obj\Debug\BeerTasters.Common.dll
+C:\projects\BeerTasters\BeerTasters.Common\obj\Debug\BeerTasters.Common.pdb

@@ -1,0 +1,58 @@
+﻿@model BeerTasters.Models.BeerRatingViewModel
+
+@{
+    ViewBag.Title = "BearRatingView";
+}
+
+<h2>BearRatingView</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>BeerRatingViewModel</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <div>
+                    @Html.HiddenFor(model => model.beerid)
+                </div>
+
+                <div class="form-group">
+                    <div>
+                        @Html.LabelFor(model => model.username, htmlAttributes: new { @class = "control-label" })
+                    </div>
+                    <div>
+                        @Html.EditorFor(model => model.username, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.username, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>
+                        @Html.LabelFor(model => model.userrating, htmlAttributes: new { @class = "control-label" })
+                    </div>
+                    <div>
+                        @Html.EditorFor(model => model.userrating, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.userrating, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>
+                        @Html.LabelFor(model => model.comment, htmlAttributes: new { @class = "control-label" })
+                    </div>
+                    <div>
+                        @Html.EditorFor(model => model.comment, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.comment, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+
