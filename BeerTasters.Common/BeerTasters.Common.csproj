@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="BeerDataEntryDTO.cs" />
     <Compile Include="BeerDTO.cs" />
+    <Compile Include="ExceptionDTO.cs" />
     <Compile Include="RatingDTO.cs" />
     <Compile Include="BeerRatingDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

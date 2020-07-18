@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using BeerTasters.Common;
+using System.Threading.Tasks;
 using BeerTasters.Repository;
 
 namespace BeerTasters.Controllers
@@ -15,9 +16,10 @@ namespace BeerTasters.Controllers
         private readonly IBeerTasterRepository _beerTasterRepository;
 
         // GET: BeerTasters
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            BeerDataEntryViewModel model = new BeerDataEntryViewModel();
+            //List<BeerDataEntryDTO> model = new List<BeerDataEntryDTO>();
+            IEnumerable<BeerDataEntryDTO> model = await _beerTasterRepository.GetRatings();
             //need to populate data here using RESTful API here
             return View("BeerDataView",model);
         }
@@ -29,6 +31,15 @@ namespace BeerTasters.Controllers
             //need to populate data here
             //potentially with viewbag for extra information
             return View("BeerRatingView", model);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(BeerRatingDTO rating)
+        {
+            //BeerRatingDTO model = new BeerRatingDTO();
+            //need to POST the data to API
+            //potentially with viewbag for extra information
+            return View();
         }
 
         // GET: BeerTasters/Details/5

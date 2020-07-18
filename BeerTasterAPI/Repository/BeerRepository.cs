@@ -28,5 +28,14 @@ namespace BeerTasters.API.Repository
             return new List<BeerDTO>();
         }
 
+        public async Task<BeerDTO> GetBeersById(int id)
+        {
+            var response = await _client.GetAsync(AppSettings.PunkApiBaseAddress + "beers/"+id);
+            if (response.IsSuccessStatusCode)
+                return await response.Content.ReadAsAsync<BeerDTO>();
+
+            return null;
+        }
+
     }
 }

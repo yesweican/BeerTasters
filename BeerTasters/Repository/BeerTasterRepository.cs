@@ -19,13 +19,31 @@ namespace BeerTasters.Repository
             _client = new HttpClient();
         }
 
-        public async Task<IEnumerable<BeerRatingDTO>> GetRatings()
+        public async Task<IEnumerable<BeerDataEntryDTO>> GetRatings()
         {
             var response = await _client.GetAsync(AppSettings.WebApiBaseAddress+"BeerRatings");
             if (response.IsSuccessStatusCode)
-                return await response.Content.ReadAsAsync<IEnumerable<BeerRatingDTO>>();
+                return await response.Content.ReadAsAsync<IEnumerable<BeerDataEntryDTO>>();
 
-            return new List<BeerRatingDTO>();
+            return new List<BeerDataEntryDTO>();
+        }
+
+        public async Task<BeerDataEntryDTO> GetRatingsById(int id)
+        {
+            var response = await _client.GetAsync(AppSettings.WebApiBaseAddress + "BeerRatings/"+id);
+            if (response.IsSuccessStatusCode)
+                return await response.Content.ReadAsAsync<BeerDataEntryDTO>();
+
+            return null;
+        }
+
+        public async Task<bool> SaveRating(BeerRatingDTO dto)
+        {
+            var response = await _client.PutAsJsonAsync<BeerRatingDTO>(AppSettings.WebApiBaseAddress + "BeerRatings", dto);
+            if (response.IsSuccessStatusCode)
+                return true;
+
+            return false;
         }
     }
 }
