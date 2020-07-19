@@ -41,11 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BeerDataEntryDTO.cs" />
+    <Compile Include="BeerWithRatingsDTO.cs" />
     <Compile Include="BeerDTO.cs" />
     <Compile Include="ExceptionDTO.cs" />
+    <Compile Include="RatingShortDTO.cs" />
     <Compile Include="RatingDTO.cs" />
-    <Compile Include="BeerRatingDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

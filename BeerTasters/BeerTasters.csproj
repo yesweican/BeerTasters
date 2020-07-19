@@ -212,14 +212,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\BeerDataEntryViewModel.cs" />
-    <Compile Include="Models\BeerRatingViewModel.cs" />
+    <Compile Include="Models\BeerWithRatingsViewModel.cs" />
+    <Compile Include="Models\RatingViewModel.cs" />
     <Compile Include="Models\BeerViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\BeerRepository.cs" />
-    <Compile Include="Repository\BeerTasterRepository.cs" />
-    <Compile Include="Repository\IBeerRepository.cs" />
-    <Compile Include="Repository\IBeerTasterRepository.cs" />
+    <Compile Include="Repository\PunkRepository.cs" />
+    <Compile Include="Repository\TasterRepository.cs" />
+    <Compile Include="Repository\IPunkRepository.cs" />
+    <Compile Include="Repository\ITasterRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -257,9 +257,9 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\BeerTasters\BearRatingView.cshtml" />
+    <Content Include="Views\BeerTasters\BeerRatingView.cshtml" />
     <Content Include="Views\BeerTasters\BeerDataView.cshtml" />
-    <Content Include="Views\BeerTasters\BeerDataEntryView.cshtml" />
+    <Content Include="Views\BeerTasters\BeerWithRatingsView.cshtml" />
     <Content Include="Views\BeerTasters\PunkView.cshtml" />
   </ItemGroup>
   <ItemGroup>

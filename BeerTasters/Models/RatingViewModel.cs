@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BeerTasters.Models
 {
-    public class BeerRatingViewModel
+    public class RatingViewModel
     {
         public int beerid;
         public string username;

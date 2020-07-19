@@ -7,7 +7,6 @@ C:\projects\BeerTasters\BeerTasters.Tests\bin\Debug\Microsoft.VisualStudio.TestP
 C:\projects\BeerTasters\BeerTasters.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
 C:\projects\BeerTasters\BeerTasters.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 C:\projects\BeerTasters\BeerTasters.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
-C:\projects\BeerTasters\BeerTasters.Tests\obj\Debug\BeerTasters.Tests.csprojAssemblyReference.cache
 C:\projects\BeerTasters\BeerTasters.Tests\obj\Debug\BeerTasters.Tests.csproj.CoreCompileInputs.cache
 C:\projects\BeerTasters\BeerTasters.Tests\obj\Debug\BeerTasters.Tests.csproj.CopyComplete
 C:\projects\BeerTasters\BeerTasters.Tests\obj\Debug\BeerTasters.Tests.dll

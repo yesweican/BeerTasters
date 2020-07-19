@@ -8,6 +8,7 @@ namespace BeerTasters.Common
 {
     public class RatingDTO
     {
+        public int beerid;
         public string username;
         public int userrating;
         public string comment;

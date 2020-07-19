@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace BeerTasters.Common
 {
-    public class BeerRatingDTO:RatingDTO
+    public class RatingShortDTO
     {
-        public int beerid;
+        public string username;
+        public int userrating;
+        public string comment;
     }
 }

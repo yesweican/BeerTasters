@@ -3,15 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BeerTasters.Common;
 
-namespace BeerTasters.Common
+namespace BeerTasters.Models
 {
-    public class BeerDataEntryDTO
+    /// <summary>
+    /// NOT going to be used for now
+    /// </summary>
+    public class BeerWithRatingsViewModel
     {
         public int id;
         public string name;
         public string description;
 
-        public List<RatingDTO> comments;
+        List<RatingViewModel> comments;
     }
 }

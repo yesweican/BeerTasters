@@ -7,8 +7,8 @@ using BeerTasters.Common;
 
 namespace BeerTasters.Repository
 {
-    public interface IBeerTasterRepository
+    public interface ITasterRepository
     {
-        Task<IEnumerable<BeerDataEntryDTO>> GetRatings();
+        Task<IEnumerable<BeerWithRatingsDTO>> GetRatings();
     }
 }

@@ -12,22 +12,22 @@ using System.Threading.Tasks;
 
 namespace BeerTasters.API.Controllers
 {
-    public class BeerRatingsController : ApiController
+    public class BeerWithRatingsController : ApiController
     {
-        static List<BeerDataEntryDTO> data;
+        static List<BeerWithRatingsDTO> data;
 
-        static BeerRatingsController()
+        static BeerWithRatingsController()
         {
             if(File.Exists("data.json"))
             {
                 //load from the existing data
                 string dataString = File.ReadAllText("data.json");
-                data = JsonConvert.DeserializeObject<List<BeerDataEntryDTO>>(dataString);
+                data = JsonConvert.DeserializeObject<List<BeerWithRatingsDTO>>(dataString);
             }
             else
             {
                 //creating empty collection of data
-                data = new List<BeerDataEntryDTO>();
+                data = new List<BeerWithRatingsDTO>();
                 //persist the data - need lock
                 string newString = JsonConvert.SerializeObject(data, Formatting.Indented);
                 File.WriteAllText("data.json", newString);
@@ -38,7 +38,7 @@ namespace BeerTasters.API.Controllers
         /// </summary>
         /// <returns></returns>
         // GET api/BeerRatings
-        public IEnumerable<BeerDataEntryDTO> Get()
+        public IEnumerable<BeerWithRatingsDTO> Get()
         {
             return data;
         }
@@ -49,7 +49,7 @@ namespace BeerTasters.API.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         // GET api/BeerRatings/5
-        public IEnumerable<BeerDataEntryDTO> Get(int id)
+        public IEnumerable<BeerWithRatingsDTO> Get(int id)
         {
             ///
             /// To Query the List using the id
@@ -73,7 +73,7 @@ namespace BeerTasters.API.Controllers
         public void Put(int id, [FromBody] string value)
         {
             ///
-            /// Load the string to BeerRatingDTO
+            /// Load the string to RatingDTO
             /// To Query the List using the id
             /// If Found update, if not Insert
             ///

@@ -7,13 +7,13 @@ using System.Net;
 using System.Net.Http;
 using BeerTasters.Common;
 
-namespace BeerTasters.API.Repository
+namespace BeerTasters.Repository
 {
-    public class BeerRepository:IBeerRepository
+    public class PunkRepository:IPunkRepository
     {
         private static readonly HttpClient _client;
 
-        static BeerRepository()
+        static PunkRepository()
         {
             //_client = HttpClientFactory.Create(handler);
             _client = new HttpClient();
@@ -30,7 +30,7 @@ namespace BeerTasters.API.Repository
 
         public async Task<BeerDTO> GetBeersById(int id)
         {
-            var response = await _client.GetAsync(AppSettings.PunkApiBaseAddress + "beers/"+id);
+            var response = await _client.GetAsync(AppSettings.PunkApiBaseAddress + "beers/" + id);
             if (response.IsSuccessStatusCode)
                 return await response.Content.ReadAsAsync<BeerDTO>();
 

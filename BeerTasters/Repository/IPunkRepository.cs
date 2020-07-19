@@ -7,7 +7,7 @@ using BeerTasters.Common;
 
 namespace BeerTasters.Repository
 {
-    public interface IBeerRepository
+    public interface IPunkRepository
     {
         Task<IEnumerable<BeerDTO>> GetBeers();
     }
