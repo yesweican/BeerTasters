@@ -51,6 +51,7 @@ C:\projects\BeerTasters\BeerTasterAPI\bin\roslyn\vbc.rsp
 C:\projects\BeerTasters\BeerTasterAPI\bin\roslyn\VBCSCompiler.exe
 C:\projects\BeerTasters\BeerTasterAPI\bin\roslyn\VBCSCompiler.exe.config
 C:\projects\BeerTasters\BeerTasterAPI\bin\Antlr3.Runtime.dll
+C:\projects\BeerTasters\BeerTasterAPI\bin\BeerTasters.Common.dll
 C:\projects\BeerTasters\BeerTasterAPI\bin\Microsoft.Bcl.AsyncInterfaces.dll
 C:\projects\BeerTasters\BeerTasterAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\projects\BeerTasters\BeerTasterAPI\bin\Microsoft.Extensions.Configuration.Abstractions.dll
@@ -81,6 +82,7 @@ C:\projects\BeerTasters\BeerTasterAPI\bin\System.Web.WebPages.Deployment.dll
 C:\projects\BeerTasters\BeerTasterAPI\bin\System.Web.WebPages.dll
 C:\projects\BeerTasters\BeerTasterAPI\bin\System.Web.WebPages.Razor.dll
 C:\projects\BeerTasters\BeerTasterAPI\bin\WebGrease.dll
+C:\projects\BeerTasters\BeerTasterAPI\bin\BeerTasters.Common.pdb
 C:\projects\BeerTasters\BeerTasterAPI\bin\Microsoft.Bcl.AsyncInterfaces.xml
 C:\projects\BeerTasters\BeerTasterAPI\bin\Microsoft.Extensions.Configuration.xml
 C:\projects\BeerTasters\BeerTasterAPI\bin\Microsoft.Extensions.Configuration.Abstractions.xml
@@ -114,5 +116,3 @@ C:\projects\BeerTasters\BeerTasterAPI\obj\Debug\BeerTasters.API.csproj.CoreCompi
 C:\projects\BeerTasters\BeerTasterAPI\obj\Debug\BeerTasters.API.csproj.CopyComplete
 C:\projects\BeerTasters\BeerTasterAPI\obj\Debug\BeerTasters.API.dll
 C:\projects\BeerTasters\BeerTasterAPI\obj\Debug\BeerTasters.API.pdb
-C:\projects\BeerTasters\BeerTasterAPI\bin\BeerTasters.Common.dll
-C:\projects\BeerTasters\BeerTasterAPI\bin\BeerTasters.Common.pdb

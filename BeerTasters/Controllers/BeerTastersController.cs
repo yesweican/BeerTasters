@@ -34,12 +34,13 @@ namespace BeerTasters.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(RatingDTO rating)
+        public async Task<ActionResult> Edit(RatingDTO rating)
         {
-            //RatingDTO model = new RatingDTO();
+            var repo = new TasterRepository();
             //need to POST the data to API
+            await repo.SaveRating(rating);
             //potentially with viewbag for extra information
-            return View();
+            return RedirectToAction("Index"); ;
         }
 
         // GET: BeerTasters/Details/5
@@ -52,12 +53,13 @@ namespace BeerTasters.Controllers
         }
 
         // GET: BeerTasters/Punk
-        public ActionResult Punk(int beerid)
+        public async Task<ActionResult> Punk()
         {
-            RatingViewModel model = new RatingViewModel();
+            var repo = new PunkRepository();
+            var model = await repo.GetBeers();
             //need to populate data here
             //potentially with viewbag for extra information
-            return View("BeerRatingView", model);
+            return View("PunkView", model);
         }
     }
 }

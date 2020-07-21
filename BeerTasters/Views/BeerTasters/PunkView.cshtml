@@ -16,11 +16,11 @@
 
 @foreach (var item in Model) {
 <tr>
-    <td> @Html.DisplayFor(model => model.id)</td>
-    <td> @Html.DisplayFor(model => model.name)</td>
-    <td> @Html.DisplayFor(model => model.description)</td>
-    <td> @Html.DisplayFor(model => model.tagline)</td>
-    <td> @Html.DisplayFor(model => model.image_url)</td>
+    <td> @Html.DisplayFor(model => item.id)</td>
+    <td> @Html.DisplayFor(model => item.name)</td>
+    <td> @Html.DisplayFor(model => item.description)</td>
+    <td> @Html.DisplayFor(model => item.tagline)</td>
+    <td> <img src="@Html.DisplayFor(model => item.image_url)" width="120" height="180"/></td>
     <td>
         @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
         @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
