@@ -7,7 +7,6 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using Newtonsoft.Json;
-using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 
 namespace BeerTasters.API.Controllers
@@ -46,7 +45,7 @@ namespace BeerTasters.API.Controllers
         /// <summary>
         /// Return Individual data entry
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">beerid</param>
         /// <returns></returns>
         // GET api/BeerRatings/5
         public IEnumerable<BeerWithRatingsDTO> Get(int id)
@@ -55,8 +54,8 @@ namespace BeerTasters.API.Controllers
             /// To Query the List using the id
             ///
 
-            var rating = data.Where(x => x.id == id);
-            return rating;
+            var beerWithRatings = data.Where(x => x.id == id);
+            return beerWithRatings;
         }
 
         // POST api/BeerRatings
@@ -69,8 +68,9 @@ namespace BeerTasters.API.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <param name="value"></param>
-        // PUT api/BeerRatings/5
-        public void Put(int id, [FromBody] string value)
+        // PUT api/BeerWithRatings/5
+        [HttpPost]
+        public void Put([FromBody] BeerWithRatingsDTO dto)
         {
             ///
             /// Load the string to RatingDTO
