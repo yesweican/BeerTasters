@@ -11,3 +11,4 @@ C:\projects\BeerTasters\BeerTasters.Tests\obj\Debug\BeerTasters.Tests.csproj.Cor
 C:\projects\BeerTasters\BeerTasters.Tests\obj\Debug\BeerTasters.Tests.csproj.CopyComplete
 C:\projects\BeerTasters\BeerTasters.Tests\obj\Debug\BeerTasters.Tests.dll
 C:\projects\BeerTasters\BeerTasters.Tests\obj\Debug\BeerTasters.Tests.pdb
+C:\projects\BeerTasters\BeerTasters.Tests\obj\Debug\BeerTasters.Tests.csprojAssemblyReference.cache

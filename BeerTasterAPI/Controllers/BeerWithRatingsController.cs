@@ -37,9 +37,12 @@ namespace BeerTasters.API.Controllers
         /// </summary>
         /// <returns></returns>
         // GET api/BeerRatings
-        public IEnumerable<BeerWithRatingsDTO> Get()
+        public IEnumerable<BeerWithRatingsDTO> Get(string name = null)
         {
-            return data;
+            if (string.IsNullOrEmpty(name))
+                return data;
+            else
+                return data.Where(x => x.name == name);
         }
 
         /// <summary>
@@ -48,13 +51,13 @@ namespace BeerTasters.API.Controllers
         /// <param name="id">beerid</param>
         /// <returns></returns>
         // GET api/BeerRatings/5
-        public IEnumerable<BeerWithRatingsDTO> Get(int id)
+        public BeerWithRatingsDTO Get(int id)
         {
             ///
             /// To Query the List using the id
             ///
 
-            var beerWithRatings = data.Where(x => x.id == id);
+            var beerWithRatings = data.Where(x => x.id == id).FirstOrDefault();
             return beerWithRatings;
         }
 

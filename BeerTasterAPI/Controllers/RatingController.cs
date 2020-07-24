@@ -38,26 +38,27 @@ namespace BeerTasters.API.Controllers
         /// </summary>
         /// <returns></returns>
         // GET api/BeerRatings
-        public IEnumerable<RatingDTO> Get()
+        public IEnumerable<RatingDTO> Get(string name=null)
         {
             List<RatingDTO> result = new List<RatingDTO>();
 
             foreach(var v in data)
             {
-                foreach(var c in v.comments)
+                if(string.IsNullOrEmpty(name)||v.name==name)
                 {
-                    RatingDTO dto = new RatingDTO();
+                    foreach(var c in v.comments)
+                    {
+                        RatingDTO dto = new RatingDTO();
 
-                    dto.beerid = v.id;
-                    dto.username = c.username;
-                    dto.userrating = c.userrating;
-                    dto.comment = c.comment;
+                        dto.beerid = v.id;
+                        dto.username = c.username;
+                        dto.userrating = c.userrating;
+                        dto.comment = c.comment;
 
-                    result.Add(dto);
+                        result.Add(dto);
+                    }
                 }
-
             }    
-
 
             return result;
         }
