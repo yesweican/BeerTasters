@@ -7,6 +7,7 @@ using System.Web.Http;
 using Newtonsoft.Json;
 using System.IO;
 using System.Threading.Tasks;
+using BeerTasters.API.Repository;
 
 namespace BeerTasters.API.Controllers
 {
@@ -15,6 +16,11 @@ namespace BeerTasters.API.Controllers
         static List<BeerWithRatingsDTO> data;
 
         static RatingController()
+        {
+            ReloadDataFromFile();
+        }
+
+        public static void ReloadDataFromFile()
         {
             if(File.Exists("data.json"))
             {
@@ -65,11 +71,11 @@ namespace BeerTasters.API.Controllers
 
         // PUT api/Ratings/
         [HttpPost]
-        public void Post([FromBody] RatingDTO dto)
+        public async Task Post([FromBody] RatingDTO dto)
         {
             ///
-            /// Load the string to RatingDTO
-            /// To Query the List using the id
+            /// Persist RatingDTO
+            /// To Query the existing data using the beerid
             /// If Found update, if not Insert
             ///
             var row = data.Where(x => x.id == dto.beerid).FirstOrDefault();
@@ -78,6 +84,13 @@ namespace BeerTasters.API.Controllers
             {
                 BeerWithRatingsDTO temp = new BeerWithRatingsDTO();
                 temp.comments.Add(new RatingShortDTO() { username = dto.username, userrating = dto.userrating, comment = dto.comment });
+
+                ///////////////////////
+                //Need to populate temp's Beer Information using Punk API!!!!
+                ///////////////////////
+                BeerDTO beer = await new PunkRepository().GetBeersById(dto.beerid);
+                temp.name = beer.name;
+                temp.description = beer.description;
 
                 data.Add(temp);
             }
@@ -99,6 +112,10 @@ namespace BeerTasters.API.Controllers
             string newString = JsonConvert.SerializeObject(data, Formatting.Indented);
             File.WriteAllText("data.json", newString);
 
+            ///////////////////////
+            ///Need to ask BeerWithRatingsControler to reload!
+            ///////////////////////
+            BeerWithRatingsController.ReloadDataFromFile();
         }
 
     }

@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Web.Http;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 
 namespace BeerTasters.API.Controllers
 {
@@ -17,7 +18,13 @@ namespace BeerTasters.API.Controllers
 
         static BeerWithRatingsController()
         {
-            if(File.Exists("data.json"))
+            ReloadDataFromFile();
+        }
+
+
+        public static void ReloadDataFromFile()
+        {
+            if (File.Exists("data.json"))
             {
                 //load from the existing data
                 string dataString = File.ReadAllText("data.json");
@@ -32,6 +39,7 @@ namespace BeerTasters.API.Controllers
                 File.WriteAllText("data.json", newString);
             }
         }
+
         /// <summary>
         /// Return ALL data Entries
         /// </summary>
