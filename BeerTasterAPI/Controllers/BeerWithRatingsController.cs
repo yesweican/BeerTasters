@@ -27,7 +27,7 @@ namespace BeerTasters.API.Controllers
             if (File.Exists("data.json"))
             {
                 //load from the existing data
-                string dataString = File.ReadAllText("data.json");
+                string dataString = File.ReadAllText(@"C:\Data\data.json");
                 data = JsonConvert.DeserializeObject<List<BeerWithRatingsDTO>>(dataString);
             }
             else
@@ -40,12 +40,19 @@ namespace BeerTasters.API.Controllers
             }
         }
 
+        public BeerWithRatingsController()
+        {
+            return;
+        }
+
         /// <summary>
         /// Return ALL data Entries
         /// </summary>
         /// <returns></returns>
         // GET api/BeerRatings
-        public IEnumerable<BeerWithRatingsDTO> Get(string name = null)
+        [HttpGet]
+        [Route("api/BeerWithRatings")]
+        public IEnumerable<BeerWithRatingsDTO> Index(string name = null)
         {
             if (string.IsNullOrEmpty(name))
                 return data;
@@ -69,19 +76,15 @@ namespace BeerTasters.API.Controllers
             return beerWithRatings;
         }
 
-        // POST api/BeerRatings
-        //public void Post([FromBody] string value)
-        //{
-        //}
 
         /// <summary>
         /// Update + Creating NEW
         /// </summary>
         /// <param name="id"></param>
         /// <param name="value"></param>
-        // PUT api/BeerWithRatings/5
+        // Post api/BeerWithRatings
         [HttpPost]
-        public void Put([FromBody] BeerWithRatingsDTO dto)
+        public void SaveBeer([FromBody] BeerWithRatingsDTO dto)
         {
             ///
             /// Load the string to RatingDTO

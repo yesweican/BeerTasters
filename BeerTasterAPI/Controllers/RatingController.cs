@@ -25,7 +25,7 @@ namespace BeerTasters.API.Controllers
             if(File.Exists("data.json"))
             {
                 //load from the existing data
-                string dataString = File.ReadAllText("data.json");
+                string dataString = File.ReadAllText(@"C:\Data\data.json");
                 data = JsonConvert.DeserializeObject<List<BeerWithRatingsDTO>>(dataString);
             }
             else
@@ -71,7 +71,7 @@ namespace BeerTasters.API.Controllers
 
         // PUT api/Ratings/
         [HttpPost]
-        public async Task Post([FromBody] RatingDTO dto)
+        public async Task SaveRating([FromBody] RatingDTO dto)
         {
             ///
             /// Persist RatingDTO

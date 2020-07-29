@@ -19,27 +19,39 @@ namespace BeerTasters.Repository
             _client = new HttpClient();
         }
 
-        public async Task<IEnumerable<BeerWithRatingsDTO>> GetRatings()
+        public async Task<IEnumerable<BeerWithRatingsDTO>> GetBeerWithRatings()
         {
-            var response = await _client.GetAsync(AppSettings.WebApiBaseAddress+"BeerWithRatings");
+            string url = AppSettings.WebApiBaseAddress+"BeerWithRatings";
+            var response = await _client.GetAsync(url);
             if (response.IsSuccessStatusCode)
                 return await response.Content.ReadAsAsync<IEnumerable<BeerWithRatingsDTO>>();
 
             return new List<BeerWithRatingsDTO>();
         }
 
-        public async Task<BeerWithRatingsDTO> GetRatingsById(int id)
+        public async Task<BeerWithRatingsDTO> GetBeerWithRatingsById(int id)
         {
-            var response = await _client.GetAsync(AppSettings.WebApiBaseAddress + "BeerWithRatings/"+id);
+            string url = AppSettings.WebApiBaseAddress + "BeerWithRatings/" + id;
+            var response = await _client.GetAsync(url);
             if (response.IsSuccessStatusCode)
                 return await response.Content.ReadAsAsync<BeerWithRatingsDTO>();
 
             return null;
         }
 
+        public async Task<IEnumerable<RatingDTO>> GetRatings()
+        {
+            string url = AppSettings.WebApiBaseAddress + "Ratings";
+            var response = await _client.GetAsync(url);
+            if (response.IsSuccessStatusCode)
+                return await response.Content.ReadAsAsync<IEnumerable<RatingDTO>>();
+
+            return new List<RatingDTO>();
+        }
+
         public async Task<bool> SaveRating(RatingDTO dto)
         {
-            var response = await _client.PutAsJsonAsync<RatingDTO>(AppSettings.WebApiBaseAddress + "Ratings", dto);
+            var response = await _client.PutAsJsonAsync<RatingDTO>(AppSettings.WebApiBaseAddress + "Ratings/SaveRating", dto);
             if (response.IsSuccessStatusCode)
                 return true;
 

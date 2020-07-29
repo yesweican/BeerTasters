@@ -10,5 +10,7 @@ namespace BeerTasters.Repository
     public interface IPunkRepository
     {
         Task<IEnumerable<BeerDTO>> GetBeers();
+
+        Task<BeerDTO> GetBeersById(int id);
     }
 }

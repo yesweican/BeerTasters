@@ -207,8 +207,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\BeerTastersController.cs" />
+    <Compile Include="Controllers\BeersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RatingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -257,10 +258,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\BeerTasters\BeerRatingView.cshtml" />
-    <Content Include="Views\BeerTasters\BeerDataView.cshtml" />
-    <Content Include="Views\BeerTasters\BeerWithRatingsView.cshtml" />
-    <Content Include="Views\BeerTasters\PunkView.cshtml" />
+    <Content Include="Views\Rating\BeerRatingView.cshtml" />
+    <Content Include="Views\Beers\BeerDataView.cshtml" />
+    <Content Include="Views\Beers\BeerWithRatingsView.cshtml" />
+    <Content Include="Views\Beers\PunkView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -9,6 +9,14 @@ namespace BeerTasters.Repository
 {
     public interface ITasterRepository
     {
-        Task<IEnumerable<BeerWithRatingsDTO>> GetRatings();
+        Task<IEnumerable<BeerWithRatingsDTO>> GetBeerWithRatings();
+
+
+        Task<BeerWithRatingsDTO> GetBeerWithRatingsById(int id);
+
+
+        Task<IEnumerable<RatingDTO>> GetRatings();
+
+        Task<bool> SaveRating(RatingDTO dto);
     }
 }
